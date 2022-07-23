@@ -7,12 +7,14 @@
   "scripts": {
     "build": "tsc",
     "build1": "tsc --esModuleInterop --downlevelIteration ./src/Engine.ts",
-    "lint": "eslint . --fix"
+    "lint": "eslint . --fix",
+    "run:dev": "ts-node ."
   },
   "dependencies": {
     "@types/node": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.30.7",
     "@typescript-eslint/parser": "^5.30.7",
+    "eslint": "^8.20.0",
     "i": "^0.3.7",
     "nano-time": "^1.0.0",
     "npm": "^8.15.0",

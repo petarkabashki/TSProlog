@@ -1,8 +1,14 @@
 {
-  "include": ["src"],
+  "include": ["src", "index.ts"],
   "exclude": ["node_modules", "IP"],
   "compilerOptions": {
-    "outDir": "dist",
+
+    "outDir": "./out",
+    "rootDir": "./src",
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "target": "es2022",
+        // "outDir": "dist",
 
     /* Visit https://aka.ms/tsconfig to read more about this file */
 
@@ -15,7 +21,7 @@
     // "disableReferencedProjectLoad": true,             /* Reduce the number of projects loaded automatically by TypeScript. */
 
     /* Language and Environment */
-    "target": "es2016",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    // "target": "es2016",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
     // "lib": [],                                        /* Specify a set of bundled library declaration files that describe the target runtime environment. */
     // "jsx": "preserve",                                /* Specify what JSX code is generated. */
     // "experimentalDecorators": true,                   /* Enable experimental support for TC39 stage 2 draft decorators. */

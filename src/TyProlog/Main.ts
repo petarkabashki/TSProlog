@@ -45,12 +45,12 @@ const srun = (fname0: string) => {
   console.log(`time=${t2.subtract(t1).divide(1000000000.0)}`);
 }
 
-const Main = (args: string[]) => {
+export const Main = (args: string[]) => {
   const fname = args[0];
   run(fname);
 }
-export default {
-  pp,
-  println,
-  Main,
-}
+// export default {
+//   pp,
+//   println,
+//   Main,
+// }
