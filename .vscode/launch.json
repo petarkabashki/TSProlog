@@ -5,11 +5,18 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "Debug Java",
+      "request": "launch",
+      "mainClass": "${workspaceFolder}/IP/out/iProlog/Main.class",
+      "args": "${workspaceFolder}/IP/progs/queens.pl"
+    },
+    {
       "type": "node",
       "request": "launch",
-      "name": "Build Project",
+      "name": "Debug Node",
       "program": "${workspaceFolder}/src/index.ts",
-      "preLaunchTask": "yarn: build",
+      "preLaunchTask": "npm: build",
       "sourceMaps": true,
       "smartStep": true,
       "internalConsoleOptions": "openOnSessionStart",

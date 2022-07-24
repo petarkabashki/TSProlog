@@ -1,13 +1,16 @@
 {
-  "include": ["src", "index.ts"],
-  "exclude": ["node_modules", "IP"],
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "IP", "dist", "src/TyProlog"],
   "compilerOptions": {
 
-    "outDir": "./out",
+    "outDir": "./dist",
     "rootDir": "./src",
     "sourceMap": true,
     "moduleResolution": "node",
-    "target": "es2022",
+    "target": "ES2015",
+    "tsBuildInfoFile": "dist/.tsbuildinfo",
+    "composite": true,
+    "esModuleInterop": true,
         // "outDir": "dist",
 
     /* Visit https://aka.ms/tsconfig to read more about this file */

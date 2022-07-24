@@ -1,5 +1,6 @@
+import fs from 'fs';
 import Clause from './Clause';
-import Toks from './Toks'
+import {toSentences} from './Toks'
 import IntStack from './IntStack';
 import { pp, println} from './utils';
 import Spine from './Spine';
@@ -344,9 +345,10 @@ export default class Engine {
    * loads a program from a .nl file of
    * "natural language" equivalents of Prolog/HiLog statements
    */
-  dload(s: string): Clause[] {
-    const fromFile: boolean = true;
-    const Wsss: Array<Array<Array<string>>> = Toks.toSentences(s, fromFile);
+  dload(fname: string): Clause[] {
+    // const fromFile: boolean = true;
+    const s: string = fs.readFileSync(fname).toString();
+    const Wsss: Array<Array<Array<string>>> = toSentences(s);
 
     const Cs: Array<Clause> = new Array<Clause>();
 
